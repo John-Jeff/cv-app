@@ -2,24 +2,42 @@
 import { Component } from "react";
 
 class EducationForm extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            schoolName: '',
+            location: '',
+            degree: '',
+        }
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({
+            [event.target.name]: event.target.value
+        });
+        this.props.getEducation(this.state);
+    }
 
     render() {
         return (
             <div className="edu-sec">
-                <label for="school-name" >Name of School:
-                    <input type='text' name='company-name' />
+                <label htmlFor="schoolName" >Name of School:
+                    <input type='text' name='schoolName' value={this.state.schoolName} onChange={this.handleChange}/>
                 </label>
-                <label for="location" >Location:
-                    <input type='text' name='location' />
+                <label htmlFor="location" >Location:
+                    <input type='text' name='location' value={this.state.location} onChange={this.handleChange}/>
                 </label>
-                <label for="start-date" >Start Date:
-                    <input type='date' name='start-date' />
+                <label htmlFor="startDate" >Start Date:
+                    <input type='date' name='startDate' />
                 </label>
-                <label for="end-date" >End Date:
-                    <input type='date' name='end-date' />
+                <label htmlFor="endDate" >End Date:
+                    <input type='date' name='endDate' />
                 </label>
-                <label for="degree" >Degree:
-                    <input type='text' name='degree' />
+                <label htmlFor="degree" >Degree:
+                    <input type='text' name='degree' value={this.state.degree} onChange={this.handleChange}/>
                 </label>
             </div>
         );
