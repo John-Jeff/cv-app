@@ -1,5 +1,5 @@
 
-import './App.css';
+import './styles/App.css';
 
 import CVForm from './components/CVForm';
 import CVPreview from './components/CVPreview';

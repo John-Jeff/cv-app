@@ -1,4 +1,4 @@
-import './CVForm.css'
+import '../styles/CVForm.css';
 
 import EducationForm from './EducationForm';
 import ExperienceForm from './ExperienceForm';

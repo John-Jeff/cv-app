@@ -1,4 +1,4 @@
-import './CVPreview.css';
+import '../styles/CVPreview.css';
 
 import { Component } from 'react';
 
