@@ -1,0 +1,18 @@
+.cv-form {
+    background: #ffd8d8;
+    padding: 20px;
+}
+
+.exp-sec,
+.edu-sec {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+
+input {
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
