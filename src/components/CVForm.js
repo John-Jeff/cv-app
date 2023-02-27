@@ -40,11 +40,11 @@ class CVForm extends Component {
 
     render() {
         return (
-            <form className="cv-form" onSubmit={this.handleSubmit}>
+            <div className="cv-form" onSubmit={this.handleSubmit}>
                 <EducationForm getEducation={this.getEducation}/>
                 <ExperienceForm getExperience={this.getExperience}/>
-                <button type='submit'>Submit</button>
-            </form>
+                {/* <button type='submit'>Submit</button> */}
+            </div>
         );
     }
 }

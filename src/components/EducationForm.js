@@ -9,9 +9,12 @@ class EducationForm extends Component {
             schoolName: '',
             location: '',
             degree: '',
+            startDate: '',
+            endDate: ''
         }
 
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
@@ -21,25 +24,38 @@ class EducationForm extends Component {
         this.props.getEducation(this.state);
     }
 
+    handleSubmit() {
+        console.log(this.state);
+
+        this.setState({
+            schoolName: '',
+            location: '',
+            degree: '',
+            startDate: '',
+            endDate: ''
+        });
+    }
+
     render() {
         return (
-            <div className="edu-sec">
-                <label htmlFor="schoolName" >Name of School:
-                    <input type='text' name='schoolName' value={this.state.schoolName} onChange={this.handleChange}/>
+            <form className="edu-sec" onSubmit={this.handleSubmit}>
+                <label htmlFor="schoolName" >Name of School
+                    <input type='text' name='schoolName' value={this.state.schoolName} onChange={this.handleChange} required />
                 </label>
-                <label htmlFor="location" >Location:
-                    <input type='text' name='location' value={this.state.location} onChange={this.handleChange}/>
+                <label htmlFor="location" >Location
+                    <input type='text' name='location' value={this.state.location} onChange={this.handleChange} required />
                 </label>
-                <label htmlFor="startDate" >Start Date:
-                    <input type='date' name='startDate' />
+                <label htmlFor="startDate" >Start Date
+                    <input type='date' name='startDate' value={this.state.startDate} onChange={this.handleChange} required />
                 </label>
-                <label htmlFor="endDate" >End Date:
-                    <input type='date' name='endDate' />
+                <label htmlFor="endDate" >End Date
+                    <input type='date' name='endDate' value={this.state.endDate} onChange={this.handleChange} />
                 </label>
-                <label htmlFor="degree" >Degree:
-                    <input type='text' name='degree' value={this.state.degree} onChange={this.handleChange}/>
+                <label htmlFor="degree" >Degree
+                    <input type='text' name='degree' value={this.state.degree} onChange={this.handleChange} required />
                 </label>
-            </div>
+                <button type='submit'>Add</button>
+            </form>
         );
     }
 
