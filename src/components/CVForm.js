@@ -10,40 +10,39 @@ class CVForm extends Component {
         super(props);
 
         this.state = {
-            experience: {},
-            education: {}
+            experience: [],
+            education: []
         }
 
-        this.getEducation = this.getEducation.bind(this);
-        this.getExperience = this.getExperience.bind(this);
+        this.addEducation = this.addEducation.bind(this);
+        this.addExperience = this.addExperience.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    getEducation(stateEdu) {
+    addEducation(stateEdu) {
         this.setState({
-            education: stateEdu
+            education: this.state.education.concat(stateEdu)
         });
     }
 
-    getExperience(stateExp) {
+    addExperience(stateExp) {
         this.setState({
-            experience: stateExp
+            experience: this.state.experience.concat(stateExp)
         });
     }
 
-    handleSubmit(e) {
-        e.preventDefault();
-        console.log(this.experience);
-        console.log(this.education);
-        this.props.getFormData(this.experience);
+    handleSubmit() {
+        console.log(this.state.education);
+        console.log(this.state.experience);
+
     }
 
     render() {
         return (
-            <div className="cv-form" onSubmit={this.handleSubmit}>
-                <EducationForm getEducation={this.getEducation}/>
-                <ExperienceForm getExperience={this.getExperience}/>
-                {/* <button type='submit'>Submit</button> */}
+            <div className="cv-form">
+                <EducationForm addEducation={this.addEducation}/>
+                <ExperienceForm addExperience={this.addExperience}/>
+                <button onClick={this.handleSubmit}>Submit</button>
             </div>
         );
     }

@@ -21,11 +21,11 @@ class EducationForm extends Component {
         this.setState({
             [event.target.name]: event.target.value
         });
-        this.props.getEducation(this.state);
     }
 
-    handleSubmit() {
-        console.log(this.state);
+    handleSubmit(e) {
+        e.preventDefault();
+        // console.log(this.state);
 
         this.setState({
             schoolName: '',
@@ -34,6 +34,8 @@ class EducationForm extends Component {
             startDate: '',
             endDate: ''
         });
+
+        this.props.addEducation(this.state);
     }
 
     render() {

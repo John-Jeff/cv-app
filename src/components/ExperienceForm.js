@@ -21,11 +21,11 @@ class ExperienceForm extends Component {
         this.setState({
             [event.target.name]: event.target.value
         });
-        this.props.getExperience(this.state);
     }
 
-    handleSubmit() {
-        console.log(this.state);
+    handleSubmit(e) {
+        e.preventDefault();
+        // console.log(this.state);
 
         this.setState({
             companyName: '',
@@ -34,11 +34,13 @@ class ExperienceForm extends Component {
             startDate: '',
             endDate: ''
         })
+
+        this.props.addExperience(this.state);
     }
 
     render() {
         return (
-            <form className="exp-sec" onSubmit={this.handleChange}>
+            <form className="exp-sec" onSubmit={this.handleSubmit}>
                 <label htmlFor="companyName" >Company Name
                     <input type='text' name='companyName' value={this.state.companyName} onChange={this.handleChange} required />
                 </label>
