@@ -1,5 +1,17 @@
 
 .cv-preview {
-    min-width: 800px;
+    display: flex;
+    justify-content: center;
+    min-width: 840px;
     background: #d2fdff;
+    padding: 20px;
+}
+
+.main-page {
+    background: white;
+    box-sizing: border-box;
+    width: 800px;
+    height: 1056px;
+    border-radius: .5rem;
+
 }
