@@ -28,6 +28,7 @@ export default class IdentityForm extends Component {
         this.setState({
             name: '',
             email: '',
+            phone: '',
             address: ''
         })
 
@@ -41,6 +42,9 @@ export default class IdentityForm extends Component {
                 </label>
                 <label htmlFor='email'>Email
                     <input type='email' name='email' value={this.state.email} onChange={this.handleChange} required />
+                </label>
+                <label htmlFor='phone'>Phone Number
+                    <input type='tel' name='phone' pattern="[0-9]{3} [0-9]{3} [0-9]{4}" value={this.state.phone} onChange={this.handleChange} required />
                 </label>
                 <label htmlFor='address'>Address
                     <input type='text' name='address' value={this.state.address} onChange={this.handleChange} required />
