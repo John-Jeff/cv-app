@@ -1,7 +1,8 @@
 
-import { Component } from "react";
+import { Component } from 'react';
 
-class EducationForm extends Component {
+export default class EducationForm extends Component {
+
     constructor(props) {
         super(props);
 
@@ -17,9 +18,9 @@ class EducationForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event) {
+    handleChange(e) {
         this.setState({
-            [event.target.name]: event.target.value
+            [e.target.name]: e.target.value
         });
     }
 
@@ -40,20 +41,20 @@ class EducationForm extends Component {
 
     render() {
         return (
-            <form className="edu-sec" onSubmit={this.handleSubmit}>
-                <label htmlFor="schoolName" >Name of School
+            <form className='edu-sec' onSubmit={this.handleSubmit}>
+                <label htmlFor='schoolName' >Name of School
                     <input type='text' name='schoolName' value={this.state.schoolName} onChange={this.handleChange} required />
                 </label>
-                <label htmlFor="location" >Location
+                <label htmlFor='location' >Location
                     <input type='text' name='location' value={this.state.location} onChange={this.handleChange} required />
                 </label>
-                <label htmlFor="startDate" >Start Date
+                <label htmlFor='startDate' >Start Date
                     <input type='date' name='startDate' value={this.state.startDate} onChange={this.handleChange} required />
                 </label>
-                <label htmlFor="endDate" >End Date
+                <label htmlFor='endDate' >End Date
                     <input type='date' name='endDate' value={this.state.endDate} onChange={this.handleChange} />
                 </label>
-                <label htmlFor="degree" >Degree
+                <label htmlFor='degree' >Degree
                     <input type='text' name='degree' value={this.state.degree} onChange={this.handleChange} required />
                 </label>
                 <button type='submit'>Add</button>
@@ -62,5 +63,3 @@ class EducationForm extends Component {
     }
 
 }
-
-export default EducationForm;

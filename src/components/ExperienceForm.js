@@ -1,7 +1,8 @@
 
-import { Component } from "react";
+import { Component } from 'react';
 
-class ExperienceForm extends Component {
+export default class ExperienceForm extends Component {
+
     constructor(props) {
         super(props);
 
@@ -17,9 +18,9 @@ class ExperienceForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event) {
+    handleChange(e) {
         this.setState({
-            [event.target.name]: event.target.value
+            [e.target.name]: e.target.value
         });
     }
 
@@ -40,20 +41,20 @@ class ExperienceForm extends Component {
 
     render() {
         return (
-            <form className="exp-sec" onSubmit={this.handleSubmit}>
-                <label htmlFor="companyName" >Company Name
+            <form className='exp-sec' onSubmit={this.handleSubmit}>
+                <label htmlFor='companyName' >Company Name
                     <input type='text' name='companyName' value={this.state.companyName} onChange={this.handleChange} required />
                 </label>
-                <label htmlFor="location" >Location
+                <label htmlFor='location' >Location
                     <input type='text' name='location' value={this.state.location} onChange={this.handleChange} required />
                 </label>
-                <label htmlFor="position" >Position
+                <label htmlFor='position' >Position
                     <input type='text' name='position' value={this.state.position} onChange={this.handleChange} required />
                 </label>
-                <label htmlFor="startDate" >Start Date
+                <label htmlFor='startDate' >Start Date
                     <input type='date' name='startDate' value={this.state.startDate} onChange={this.handleChange} required />
                 </label>
-                <label htmlFor="endDate" >End Date
+                <label htmlFor='endDate' >End Date
                     <input type='date' name='endDate' value={this.state.endDate} onChange={this.handleChange} required />
                 </label>
                 <button type='submit'>Add</button>
@@ -62,5 +63,3 @@ class ExperienceForm extends Component {
     }
 
 }
-
-export default ExperienceForm;

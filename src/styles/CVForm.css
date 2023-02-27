@@ -3,6 +3,11 @@
     padding: 20px;
 }
 
+h1 {
+    margin-top: 0;
+}
+
+.id-sec,
 .exp-sec,
 .edu-sec {
     background: white;
