@@ -7,11 +7,57 @@
     padding: 20px;
 }
 
+ .cv-preview h2 {
+    display: inline-block;
+    background: #c8ffe1;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+hr {
+    margin-top: 3px;
+}
+
+.cv-preview p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
 .main-page {
     background: white;
     box-sizing: border-box;
     width: 800px;
     height: 1056px;
+    padding: 48px;
     border-radius: .5rem;
 
 }
+
+/***** IDENTITY SEC *****/
+
+.preview-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-head {
+    color: #52ad7b;
+    font-size: 34px;
+    font-weight: 400;
+
+}
+
+.info-head p {
+    text-align: end;
+    margin: 3px 0;
+}
+
+.summary p {
+    font-style: italic;
+}
+
+/***** EDUCATION SEC *****/
+

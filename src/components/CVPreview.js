@@ -8,26 +8,32 @@ class CVPreview extends Component {
         return (
             <div className='cv-preview'>
                 <div className='main-page'>
-                    <header>
-                        <h1 className='name-head'>Name Name</h1>
+                    <header className='preview-head'>
+                        <h1 className='name-head'>Steve Wilson</h1>
                         <div className='info-head'>
-                            <p>email</p>
-                            <p>phone</p>
-                            <p>address</p>
+                            <p>email@gmail.com</p>
+                            <p>123-456-7890</p>
+                            <p>Greater City Area</p>
                         </div>
                     </header>
                     <section className='summary'>
                         <p>
-                            vdskvdksmvdsmvmdslmvmdsvmldsvmdsmvmdsvmdsvmkdsmvklfs vhbwfencmsmcsvdslv svldsvdv slvdk s
+                            vdskvdksmvdsmvm dslmv mdsvm ldsvmdsmvm dsvmd svmkdsmvklfs vhbw fenc msmcsvdslv svldsvdv slvdk s
+                            vslmvdms dmksmvlsmvds dmsvmldsvm slk mvsdvmv mdsmvlmds fe f e fa efafeaf 
+                            affesg fesf fe fesfoeksf fd qdefssf sfdff fef effwfw
                         </p>
-
                     </section>
                     <section className='education'>
                         <h2>Education</h2>
+                        <hr/>
+                        <div className='edu-block'>
+
+                        </div>
 
                     </section>
                     <section className='experience'>
-                        <h2>Experience</h2>
+                        <h2>Work Experience</h2>
+                        <hr/>
                         
                     </section>
                 </div>
