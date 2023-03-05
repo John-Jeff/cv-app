@@ -1,7 +1,7 @@
 .cv-form {
     background: #ffd8d8;
     max-width: 840px;
-    padding: 20px;
+    padding: 40px 60px;
 }
 
 h1 {
@@ -15,7 +15,7 @@ h1 {
 .edu-sec {
     background: white;
     padding: 30px 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-radius: .5rem;
 }
 
